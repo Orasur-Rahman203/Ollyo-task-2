@@ -110,7 +110,7 @@ function App() {
             </SortableContext>
           </DndContext>
           <div className='flex justify-center items-center'>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl md:py-24 xl:py-32">
+            <div className="card card-compact w-96 bg-base-200 shadow-xl md:py-24 xl:py-32">
               <figure><img width={20} src="./assets/imageIcon.png" alt="Shoes" /></figure>
               <div className="card-body">
                 <p className="text-center font-bold">Add images</p>
