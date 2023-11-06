@@ -31,7 +31,7 @@ function imageComponent({ image }) {
         {...attributes}
         {...listeners}
         ref={setNodeRef}
-        className='p-4 rounded-xl shadow-md my-3 bg-white hover:opacity-25'>
+        className='p-4 rounded-xl shadow-md my-3 bg-base-100 hover:opacity-50'>
         <div onClick={() => handleSelected(image)}>
           <div className="form-control">
             <label className="label cursor-pointer">
