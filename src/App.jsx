@@ -82,10 +82,15 @@ function App() {
   return (
     <div className='m-8'>
       <div className='flex justify-between items-center pt-2'>
-        <div><h1>2 Files Selected</h1></div>
-        <div className='btn btn-outline btn-error'>
-          <button>Delete files</button>
-        </div>
+        {true ? <>
+          <div><h1>2 Files Selected</h1></div>
+          <div className='btn btn-outline btn-error'>
+            <button>Delete files</button>
+          </div>
+        </>
+          :
+          " "
+        }
       </div>
       <div className='flex justify-center items-center '>
         <div className='grid sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2'>
@@ -105,10 +110,10 @@ function App() {
             </SortableContext>
           </DndContext>
           <div className='flex justify-center items-center'>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl py-24">
+            <div className="card card-compact w-96 bg-base-100 shadow-xl md:py-24 xl:py-32">
               <figure><img width={20} src="./assets/imageIcon.png" alt="Shoes" /></figure>
               <div className="card-body">
-                <p className="card-title text-center">Add images</p>
+                <p className="text-center font-bold">Add images</p>
               </div>
             </div>
           </div>
