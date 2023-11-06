@@ -25,22 +25,28 @@ function imageComponent({ image }) {
 
 
   return (
-    <div
-      style={style}
-      {...attributes}
-      {...listeners}
-      ref={setNodeRef}
-      className='p-4 rounded-md shadow-md text-black my-3 bg-white hover:opacity-25'>
-      <div onClick={() => handleSelected(image)}>
-        <div className="form-control">
-          <label className="label cursor-pointer">
-            <input
-              type="checkbox" unchecked="unchecked" className="checkbox checkbox-info" />
-          </label>
+    <div>
+      <div
+        style={style}
+        {...attributes}
+        {...listeners}
+        ref={setNodeRef}
+        className='p-4 rounded-xl shadow-md my-3 bg-white hover:opacity-25'>
+        <div onClick={() => handleSelected(image)}>
+          <div className="form-control">
+            <label className="label cursor-pointer">
+              <input
+                type="checkbox" unchecked="unchecked" className="checkbox checkbox-info" />
+            </label>
+          </div>
         </div>
+        <img src={image.image} alt='image' />
       </div>
-      <img src={image.image} alt='image' />
+      {/* <div>
+        <img src='' alt='image' />
+      </div> */}
     </div>
+
   )
 }
 export default imageComponent
