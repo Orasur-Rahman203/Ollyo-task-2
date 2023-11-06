@@ -35,7 +35,7 @@ function imageComponent({ image }) {
         <div className="form-control">
           <label className="label cursor-pointer">
             <input
-              type="checkbox" unchecked="unchecked" className="checkbox checkbox-success" />
+              type="checkbox" unchecked="unchecked" className="checkbox checkbox-info" />
           </label>
         </div>
       </div>

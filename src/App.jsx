@@ -78,26 +78,35 @@ function App() {
       return arrayMove(people, oldIndex, newIndex);
     })
   }
-  console.log(selectItemArray);
+  // console.log(selectItemArray);
   return (
-    <div className='flex justify-center items-center'>
-      <div className='grid sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2'>
-        <DndContext
-          collisionDetection={closestCenter}
-          onDragEnd={handleDragEnd}
-        >
-          <SortableContext
-            items={people}
-            strategy={verticalListSortingStrategy}
-          >
-            {
-              people.map((image) => (
-                <Image image={image} key={image.id} />
-              ))
-            }
-          </SortableContext>
-        </DndContext>
+    <div className='m-8'>
+      <div className='flex justify-between items-center pt-2'>
+        <div><h1>2 Files Selected</h1></div>
+        <div className='btn btn-outline btn-error'>
+          <button>Delete files</button>
+        </div>
       </div>
+      <div className='flex justify-center items-center '>
+        <div className='grid sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2'>
+          <DndContext
+            collisionDetection={closestCenter}
+            onDragEnd={handleDragEnd}
+          >
+            <SortableContext
+              items={people}
+              strategy={verticalListSortingStrategy}
+            >
+              {
+                people.map((image) => (
+                  <Image image={image} key={image.id} />
+                ))
+              }
+            </SortableContext>
+          </DndContext>
+        </div>
+      </div>
+
     </div>
 
   )
